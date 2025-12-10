@@ -30,8 +30,14 @@ body.light-mode {
     --bg-glass: rgba(255, 255, 255, 0.9);
     --text-main: #1e293b;
     --text-muted: #475569;
-    --text-highlight: #4338ca;
-    /* Darker indigo/purple */
+
+    /* GREEN OVERRIDES */
+    --primary: #10b981;
+    --primary-gradient: linear-gradient(135deg, #10b981 0%, #34d399 50%, #059669 100%);
+    --text-highlight: #047857;
+    /* Dark green text */
+    --glow: 0 0 20px rgba(16, 185, 129, 0.4);
+
     --glass-border: 1px solid rgba(0, 0, 0, 0.12);
     /* Stronger border for visibility */
     --glass-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.15);
@@ -660,6 +666,8 @@ h2 {
     left: 100%;
 }
 
+
+
 /* Secondary Button Style */
 .btn-secondary {
     display: inline-block;
@@ -804,10 +812,81 @@ h2 {
 }
 
 /* --- SERVICES SECTION --- */
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* --- SERVICES SECTION --- */
 .services-section {
     padding: 4rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+/* --- NAVIGATION ARROWS --- */
+.scroll-down {
+    margin-top: 3rem;
+    font-size: 2rem;
+    color: var(--text-highlight);
+    animation: bounce 2s infinite;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.scroll-down:hover {
+    color: var(--primary);
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    width: 50px;
+    height: 50px;
+    background: var(--bg-card);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--primary);
+    border-radius: 50%;
+    color: var(--primary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 990;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(20px);
+}
+
+.scroll-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.scroll-top:hover {
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+    transform: translateY(-5px);
 }
 
 .services-grid {
@@ -817,8 +896,9 @@ h2 {
     margin-top: 2rem;
 }
 
+
 .service-card {
-    background: rgba(30, 41, 59, 0.9);
+    background: var(--bg-card);
     /* More opaque */
     backdrop-filter: var(--backdrop);
     border: 1px solid rgba(99, 102, 241, 0.3);
@@ -846,7 +926,7 @@ h2 {
 
 .service-card:hover {
     transform: translateY(-10px);
-    background: rgba(40, 50, 80, 0.95);
+    background: var(--bg-card);
     /* Lighter on hover */
     box-shadow: 0 20px 40px rgba(99, 102, 241, 0.25);
     border-color: rgba(99, 102, 241, 0.6);
@@ -1068,7 +1148,7 @@ input,
 textarea {
     width: 100%;
     padding: 16px;
-    background: rgba(15, 23, 42, 0.6);
+    background: var(--bg-glass);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     color: var(--text-main);

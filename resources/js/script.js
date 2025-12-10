@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ctx.fillStyle = isLight ? 'rgba(240, 249, 255, 0.1)' : 'rgba(15, 23, 42, 0.1)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-            ctx.fillStyle = isLight ? '#1e1b4b' : '#6366f1'; // Darker Indigo for Light Mode
+            ctx.fillStyle = isLight ? '#10b981' : '#6366f1'; // Green for Light Mode, Indigo for Dark
             ctx.font = fontSize + 'px monospace';
 
             for (let i = 0; i < drops.length; i++) {
@@ -260,7 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             { role: 'system', content: SYSTEM_PROMPT },
                             { role: 'user', content: message }
                         ],
-                        model: 'llama3-8b-8192',
+                        model: 'llama-3.1-8b-instant',
                         temperature: 0.7,
                         max_tokens: 150
                     })
@@ -297,6 +297,56 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 addMessage(errorMsg, 'bot');
+            }
+        });
+    }
+
+    // 3D Tilt Effect for Cards
+    const cards = document.querySelectorAll('.service-card, .project-card');
+
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = ((y - centerY) / centerY) * -10; // Max rotation deg
+            const rotateY = ((x - centerX) / centerX) * 10;
+
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+        });
+    });
+
+    // --- SCROLL NAVIGATION ---
+    const scrollDownBtn = document.querySelector('.scroll-down');
+    const scrollTopBtn = document.getElementById('scroll-top');
+
+    if (scrollDownBtn) {
+        scrollDownBtn.addEventListener('click', () => {
+            const nextSection = document.querySelector('.services-section');
+            if (nextSection) {
+                nextSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
+
+    if (scrollTopBtn) {
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
             }
         });
     }
