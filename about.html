@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Conoce a Emmanuel Ibarra, fundador de EIR SYSTEMS. Pasión por la música, experto en IA y diseño web profesional.">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Sobre Mí | EIR SYSTEMS">
+    <meta property="og:description"
+        content="Ingeniero en Computación y experto en IA. Conoce más sobre mi trayectoria y habilidades.">
+    <meta property="og:image" content="resources/images/eirsystems2.png">
+
+    <title>Sobre Mí | EIR SYSTEMS</title>
+    <link rel="icon" type="image/png" href="resources/images/eirsystems2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="resources/css/styles.css">
+</head>
+
+<body>
+    <script>
+        // Anti-flash script
+        if (localStorage.getItem('theme') === 'light') {
+            document.body.classList.add('light-mode');
+        }
+    </script>
+    <canvas id="bg-canvas"></canvas>
+    <nav class="animate-fade-in">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="resources/images/eirsystems2.png" alt="EIR SYSTEMS" class="nav-logo">
+                <span class="logo-text">EIR SYSTEMS</span>
+            </a>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            <ul class="menu">
+                <li><a href="index.html" class="menu-item">Inicio</a></li>
+                <li><a href="about.html" class="menu-item active">Sobre mí</a></li>
+                <li><a href="portfolio.html" class="menu-item">Portafolio</a></li>
+                <li><a href="contact.html" class="menu-item">Contacto</a></li>
+                <li><button id="theme-toggle" class="theme-toggle"><i class="fas fa-moon"></i></button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="animate-fade-in delay-200">
+        <h2 class="section-title">Sobre Mí</h2>
+        <div class="card about-container" style="padding: 2rem; background: var(--bg-card);">
+            <div class="about-text">
+                <h3>Perfil Profesional</h3>
+                <p class="pitch" style="margin: 0; text-align: left;">
+                    Soy <strong>Emmanuel Ibarra Ruano</strong>, estudiante de Ingeniería en Computación de 22 años,
+                    radicado en León, Guanajuato.
+                    <br><br>
+                    <strong>Me encanta el diseño web y soy un experto en Inteligencia Artificial.</strong>
+                    A través de <span class="highlight-text">EIR SYSTEMS</span>, busco consolidar mis habilidades en el
+                    desarrollo de software, creando soluciones que combinen eficiencia, estética y tecnología avanzada.
+                </p>
+
+                <h3>Intereses y Valores</h3>
+                <ul style="list-style: none; color: var(--text-muted); padding: 0;">
+                    <li style="margin-bottom: 0.5rem;"><i class="fas fa-brain"
+                            style="color: var(--primary); margin-right: 8px;"></i> Experto en Inteligencia Artificial
+                    </li>
+                    <li style="margin-bottom: 0.5rem;"><i class="fas fa-palette"
+                            style="color: var(--primary); margin-right: 8px;"></i> Diseño Web Profesional</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 8px;"></i> Innovación
+                        Tecnológica</li>
+                </ul>
+
+                <h3>Stack Tecnológico</h3>
+                <div class="skills-grid">
+                    <span class="skill-tag"><i class="fab fa-html5"></i> HTML5</span>
+                    <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                    <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
+                    <span class="skill-tag"><i class="fab fa-github"></i> GitHub</span>
+                    <span class="skill-tag"><i class="fas fa-code"></i> VS Code</span>
+                </div>
+
+                <h3 style="margin-top: 2rem;">Pasión por la Música</h3>
+                <p class="text-muted">Además de la programación, soy un apasionado de la música. Puedes escuchar mis
+                    creaciones en Spotify.</p>
+                <a href="https://open.spotify.com/intl-es/artist/5QM51HjyBN0SbdKCCJeLC0" target="_blank" class="btn"
+                    style="display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; background: #1DB954;">
+                    <i class="fab fa-spotify"></i> Escuchar en Spotify
+                </a>
+            </div>
+            <div class="about-img">
+                <img src="resources/images/about.jpg" alt="Emmanuel Ibarra - EIR SYSTEMS">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://github.com/manuuuiba" target="_blank" class="social-link"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://mx.linkedin.com/in/emmanuel-ibarra-ruano-51511036b?trk=people-guest_people_search-card"
+                    target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:contacto@eirsystems.com" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="copyright">© 2025 EIR SYSTEMS. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <!-- Chat Widget -->
+    <div class="chat-widget">
+        <button class="chat-button" id="chat-toggle">
+            <i class="fas fa-robot"></i>
+        </button>
+        <div class="chat-window" id="chat-window">
+            <div class="chat-header">
+                <h3><i class="fas fa-brain" style="color: var(--primary)"></i> Manu AI</h3>
+                <button class="chat-close" id="chat-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot">
+                    ¡Hola! Soy la IA de Emmanuel. Pregúntame sobre sus proyectos, gustos o experiencia. 🤖
+                </div>
+            </div>
+            <form class="chat-input-area" id="chat-form">
+                <input type="text" class="chat-input" id="chat-input" placeholder="Escribe un mensaje..." required>
+                <button type="submit" class="chat-send"><i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Script at the end of body for better loading -->
+    <script src="resources/js/script.js"></script>
+</body>
+
+</html>

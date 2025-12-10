@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portafolio de Emmanuel Ibarra (EIR SYSTEMS). Ingeniero en Computación experto en Inteligencia Artificial y Diseño Web. Soluciones digitales innovadoras.">
+    <meta name="keywords"
+        content="Emmanuel Ibarra, EIR SYSTEMS, Desarrollo Web, Inteligencia Artificial, Ingeniero en Computación, León Guanajuato, Diseño Web">
+    <meta name="author" content="Emmanuel Ibarra">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Inicio | EIR SYSTEMS">
+    <meta property="og:description"
+        content="Experto en Inteligencia Artificial y apasionado por el Diseño Web. Transformo ideas en experiencias digitales.">
+    <meta property="og:image" content="resources/images/eirsystems2.png">
+    <meta property="og:type" content="website">
+
+    <title>Inicio | EIR SYSTEMS</title>
+    <link rel="icon" type="image/png" href="resources/images/eirsystems2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="resources/css/styles.css">
+</head>
+
+<body>
+    <script>
+        // Anti-flash script
+        if (localStorage.getItem('theme') === 'light') {
+            document.body.classList.add('light-mode');
+        }
+    </script>
+
+    <!-- Intro Overlay -->
+    <div id="intro-overlay">
+        <div class="intro-logo-container">
+            <img src="resources/images/eirsystems2.png" alt="EIR SYSTEMS" class="intro-logo">
+            <div class="intro-text">EIR SYSTEMS</div>
+        </div>
+    </div>
+
+    <canvas id="bg-canvas"></canvas>
+    <nav class="animate-fade-in">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="resources/images/eirsystems2.png" alt="EIR SYSTEMS" class="nav-logo">
+                <span class="logo-text">EIR SYSTEMS</span>
+            </a>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            <ul class="menu">
+                <li><a href="index.html" class="menu-item active">Inicio</a></li>
+                <li><a href="about.html" class="menu-item">Sobre mí</a></li>
+                <li><a href="portfolio.html" class="menu-item">Portafolio</a></li>
+                <li><a href="contact.html" class="menu-item">Contacto</a></li>
+                <li><button id="theme-toggle" class="theme-toggle"><i class="fas fa-moon"></i></button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="animate-fade-in delay-200">
+        <div class="hero">
+            <div class="hero-glass">
+                <div class="avatar-container">
+                    <img src="resources/images/avatar.jpg" alt="Emmanuel Ibarra" class="avatar">
+                </div>
+                <h1>Hola, soy <span class="highlight-text">Emmanuel Ibarra</span></h1>
+                <h2>Ingeniero en Computación | EIR SYSTEMS</h2>
+                <div class="pitch">
+                    <p><i class="fas fa-map-marker-alt" style="color:var(--primary)"></i> León, Guanajuato, MX | 22 años
+                    </p>
+                    <br>
+                    <p>"Fundador de <strong>EIR SYSTEMS</strong>. <strong>Experto en Inteligencia Artificial y
+                            apasionado
+                            por el Diseño Web.</strong> Transformo ideas en experiencias digitales únicas y
+                        funcionales."
+                    </p>
+                </div>
+                <div class="hero-buttons">
+                    <a href="contact.html" class="btn">Contáctame</a>
+                    <a href="portfolio.html" class="btn-secondary">Ver Proyectos</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Services Section -->
+    <section class="services-section animate-fade-in delay-200">
+        <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">Mis Servicios</h2>
+        <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                <h3 class="service-title">Desarrollo Web</h3>
+                <p class="service-desc">Creación de sitios web modernos, responsivos y de alto rendimiento. Soluciones a
+                    medida para tu marca.</p>
+            </div>
+            <!-- Service 2 -->
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-brain"></i></div>
+                <h3 class="service-title">Consultoría en IA</h3>
+                <p class="service-desc">Implementación de modelos de lenguaje (LLMs) y soluciones inteligentes para
+                    potenciar tu negocio.</p>
+            </div>
+            <!-- Service 3 -->
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-cogs"></i></div>
+                <h3 class="service-title">Automatización</h3>
+                <p class="service-desc">Optimización de flujos de trabajo y procesos digitales para ahorrar tiempo y
+                    recursos.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://github.com/manuuuiba" target="_blank" class="social-link"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://mx.linkedin.com/in/emmanuel-ibarra-ruano-51511036b?trk=people-guest_people_search-card"
+                    target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:contacto@eirsystems.com" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="copyright">© 2025 EIR SYSTEMS. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Chat Widget -->
+    <div class="chat-prompt">¡Pruébame! 🤖</div>
+    <div class="chat-widget">
+        <button class="chat-button" id="chat-toggle">
+            <i class="fas fa-robot"></i>
+        </button>
+        <div class="chat-window" id="chat-window">
+            <div class="chat-header">
+                <h3><i class="fas fa-brain" style="color: var(--primary)"></i> Manu AI</h3>
+                <button class="chat-close" id="chat-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot">
+                    ¡Hola! Soy la IA de Emmanuel. Pregúntame sobre sus proyectos, gustos o experiencia. 🤖
+                </div>
+            </div>
+            <form class="chat-input-area" id="chat-form">
+                <input type="text" class="chat-input" id="chat-input" placeholder="Escribe un mensaje..." required>
+                <button type="submit" class="chat-send"><i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Script at the end of body for better loading -->
+    <script src="resources/js/script.js"></script>
+</body>
+
+</html>
