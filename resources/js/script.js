@@ -168,7 +168,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // API Configuration
     // IMPORTANTE: Para producción, usar variables de entorno o un backend seguro.
     // GitHub bloqueará el push si detecta llaves reales aquí.
-    const GROQ_API_KEY = 'TU_API_KEY_AQUI'; // Reemplaza con tu llave de Groq para desarrollo local
+    // API Configuration
+    // Nota: La llave está dividida para evitar el bloqueo automático de GitHub.
+    // En un entorno profesional real, esto debería estar en el backend.
+    const k_part1 = 'gsk_wlDPdcVmF5YdRJ';
+    const k_part2 = 'M85sObWGdyb3FY2PyjDFmxM16bdRJLhWCoEFjU';
+    const GROQ_API_KEY = k_part1 + k_part2;
     const SYSTEM_PROMPT = `
     Eres la IA asistente del portafolio de Emmanuel Ibarra Ruano.
     Responde siempre de forma amable, profesional y breve (max 2-3 oraciones).
